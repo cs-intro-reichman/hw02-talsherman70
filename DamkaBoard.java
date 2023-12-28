@@ -13,12 +13,13 @@ public class DamkaBoard {
 			}
 			
 			for (int j = 0; j < size; j++){
-				if (j < size - 1 ){
-					System.out.print("* ");
+				System.out.print("*");
+				if (j != size - 1 ){
+					System.out.print(" ");
 				}
-				if (j == size - 1 ){
-					System.out.print("*");
-				}
+				//if (j == (size - 1 )){
+				//	System.out.print("*");
+				//}
 				
 			}		
 			System.out.println();
