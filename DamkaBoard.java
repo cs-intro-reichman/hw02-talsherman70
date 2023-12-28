@@ -6,10 +6,10 @@ public class DamkaBoard {
 		
 		int size = Integer.parseInt(args[0]);
 		
-		for (int i = 0; i < size; i++){
+		for (int i = 1; i <= size; i++){
 			
 			if (i % 2 == 0) {
-				System.out.print(" ");
+				System.out.print(" * ");
 			}
 			
 			for (int j = 0; j < size; j++){

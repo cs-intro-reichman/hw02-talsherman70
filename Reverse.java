@@ -9,11 +9,11 @@ public class Reverse {
 		
 		
 		for (int i = str.length(); i > 0 ; i--){
-			
+			  
 			reverse = reverse + str.charAt(i - 1);
 		
 		}
 		System.out.println(reverse);
-		System.out.println("The middle character is " + reverse.charAt(str.length() / 2);
+		System.out.println("The middle character is " + reverse.charAt(reverse.length() / 2));
 	}
 }

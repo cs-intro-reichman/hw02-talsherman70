@@ -13,6 +13,7 @@ public class OneOfEachStats1 {
 		int countOverFour = 0;
 		double countBirths = 0;
 		double avg = 0; 
+		int common = 0;
 		
 		for (int i = 0; i < T; i++){
 			boolean girl = false;
@@ -23,22 +24,31 @@ public class OneOfEachStats1 {
 				count++;
 				int rand = (int)(Math.random() * 2);			 
 				
-				if (rand == 0){
+				if (rand < 0.5 ){
 				girl = true;
 				}			 
-				if (rand == 1){
+				if (rand >= 0.5){
 					boy = true;		
 				}
 			}
 			countBirths = countBirths + count;
 			if (count == 2){
 				countTwo++;
+				if (countTwo > Math.max(countThree , countOverFour )){
+					common = 2;	
+				}
 			}
 			if (count == 3){
 				countThree++;
+				if (countThree > Math.max(countTwo , countOverFour )){
+					common = 3;	
+				}
 			}
 			if (count >= 4){
 				countOverFour++;
+				if (countOverFour > Math.max(countTwo , countThree )){
+					common = 4;	
+				}
 			}
 		}
 		avg = countBirths / T;
@@ -56,6 +66,9 @@ public class OneOfEachStats1 {
 		}
 		if(countThree > Math.max(countTwo , countOverFour )){
 			System.out.println("The most common number of children is 3."); 
+		}
+		if(countTwo == Math.max(countThree , countOverFour)){
+			System.out.println("The most common number of children is " + common);
 		}
 		
 		
