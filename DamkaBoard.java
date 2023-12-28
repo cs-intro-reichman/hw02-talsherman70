@@ -16,7 +16,7 @@ public class DamkaBoard {
 				if (j < size - 1 ){
 					System.out.print("* ");
 				}
-				else{
+				if (j == size - 1 ){
 					System.out.print("*");
 				}
 				
